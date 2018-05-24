@@ -1,0 +1,14 @@
+{
+    "name": "enm/external-layout",
+    "description": "Load, modify and store html layouts from remote locally",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Philipp Marien",
+            "email": "marien@eosnewmedia.de"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
