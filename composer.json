@@ -10,10 +10,21 @@
     }
   ],
   "minimum-stability": "stable",
-  "require": {},
+  "require": {
+    "php": "^7.2",
+    "psr/http-message": "^1.0",
+    "symfony/filesystem": "^4.0",
+    "symfony/css-selector": "^4.0"
+  },
   "autoload": {
     "psr-4": {
       "Enm\\ExternalLayout\\": "src"
     }
+  },
+  "require-dev": {
+    "guzzlehttp/guzzle": "^6.3"
+  },
+  "suggest": {
+    "guzzlehttp/guzzle": "Required to use the default loader"
   }
 }
