@@ -21,15 +21,15 @@ For simplest usage you should build your layout definitions from a config array.
 
 ```php
 $factory = \Enm\ExternalLayout\LayoutCreatorFactory::withGuzzleLoader();
-$factory->enableRelativeUrlReplacement() // adds the "UrlManipulator"
-$factory->enableTwigBlocks() // adds the "TwigManipulator" and the "WorkingTagFinisher"
+$factory->enableRelativeUrlReplacement(); // adds the "UrlManipulator"
+$factory->enableTwigBlocks(); // adds the "TwigManipulator" and the "WorkingTagFinisher"
 
 $layoutCreator = $factory->create(); // create a configured instance of the LayoutCreator
 
 $layoutCreator->createFromConfig( // load the original layout, manipulate the content and stores the modified content to the configured file
   [
       'source' => 'http://example.com', // your source url, with username and password (Basic Auth) if needed
-      'destination' => __DIR__ . '/test.html.twig', // your destionation file
+      'destination' => __DIR__ . '/test.html.twig', // your destination file
       'blocks' => [
           'prepend' => [
               'headline' => 'body' // add block "body" as first child of html element "headline"

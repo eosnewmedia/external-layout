@@ -10,7 +10,7 @@ use Enm\ExternalLayout\Model\ValueObject\LayoutInterface;
  */
 interface ManipulatorInterface
 {
-    public const WORKING_TAG = 'externalLayout';
+    public const WORKING_TAG = 'enm-layout';
 
     /**
      * Manipulates the layout document with the requirements of the layout
