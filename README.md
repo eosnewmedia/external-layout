@@ -104,6 +104,7 @@ A manipulator must implement `Enm\ExternalLayout\Manipulator\ManipulatorInterfac
 Available manipulators are:
 - `UrlManipulator`: Replace relative urls with absolute urls (needed because assets normally are farther loaded from original source)
 - `TwigManipulator`: Replace strings with twig blocks; prepend or append twig blocks to html elements
+- `BaseUrlManipulator`: Removes the base tag to avoid invalid local relative paths
 
 ### Finishers
 Finishers are responsible for cleanup and string replacements which are not possible in a \DomDocument.
