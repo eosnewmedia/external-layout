@@ -7,6 +7,7 @@ use Enm\ExternalLayout\Finisher\FinisherInterface;
 use Enm\ExternalLayout\Loader\GuzzleLoader;
 use Enm\ExternalLayout\Loader\LoaderInterface;
 use Enm\ExternalLayout\Finisher\FinisherChain;
+use Enm\ExternalLayout\Manipulator\BaseUrlManipulator;
 use Enm\ExternalLayout\Manipulator\ManipulatorChain;
 use Enm\ExternalLayout\Manipulator\ManipulatorInterface;
 use Enm\ExternalLayout\Manipulator\TwigManipulator;
@@ -77,6 +78,7 @@ class LayoutCreatorFactory
     public function enableRelativeUrlReplacement(): self
     {
         $this->manipulator->register(new UrlManipulator());
+        $this->manipulator->register(new BaseUrlManipulator());
 
         return $this;
     }
