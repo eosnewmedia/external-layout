@@ -19,6 +19,9 @@ class BaseUrlManipulator implements ManipulatorInterface
     public function manipulate(\DOMDocument $document, LayoutInterface $layout): void
     {
         $head = $document->getElementsByTagName('head')->item(0);
-        $head->removeChild($head->getElementsByTagName('base')->item(0));
+
+        if($head->getElementsByTagName('base')->length > 0){
+            $head->removeChild($head->getElementsByTagName('base')->item(0));
+        }
     }
 }
