@@ -60,11 +60,13 @@ class UrlManipulator implements ManipulatorInterface
         string $attribute,
         string $host
     ): void {
-        $uri = $element->getAttribute($attribute);
+        if ($element->hasAttribute($attribute)) {
+            $uri = $element->getAttribute($attribute);
 
-        $uri = $this->convertToAbsoluteUri($host, $uri);
+            $uri = $this->convertToAbsoluteUri($host, $uri);
 
-        $element->setAttribute($attribute, $uri);
+            $element->setAttribute($attribute, $uri);
+        }
     }
 
     /**
